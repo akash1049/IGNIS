@@ -250,7 +250,7 @@ button:focus {
 .service-details .col-sm-6:nth-child(2) .item {
     border: 1px solid #7dbb18;
 }
-.service-details .col-sm-6:nth-child(3) .item {
+.service-details .col-sm-10:nth-child(3) .item {
     border: 1px solid #00cccc;
 }
 .service-details .col-sm-6:nth-child(4) .item {
@@ -262,7 +262,7 @@ button:focus {
 .service-details .col-sm-6:nth-child(2) .item-icon {
     color: #7dbb18;
 }
-.service-details .col-sm-6:nth-child(3) .item-icon {
+.service-details .col-sm-10:nth-child(3) .item-icon {
     color: #00cccc;
 }
 .service-details .col-sm-6:nth-child(4) .item-icon {
@@ -274,7 +274,7 @@ button:focus {
 .service-details .col-sm-6:nth-child(2) .item:hover {
     background: #7dbb18;
 }
-.service-details .col-sm-6:nth-child(3) .item:hover {
+.service-details .col-sm-10:nth-child(3) .item:hover {
     background: #00cccc;
 }
 .service-details .col-sm-6:nth-child(4) .item:hover {
