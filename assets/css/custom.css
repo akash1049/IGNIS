@@ -58,7 +58,6 @@
 .brand-data{
 	margin-left: 0px;
 	width: 95%;
-	height: 100px;
 	padding-top: 0px;
 }
 .social-icons{
@@ -117,5 +116,46 @@
 @media screen and (max-width: 321px){
 	.brand-data{
 		width: 25%;
+	}
+}
+
+
+
+.brand-data > img {
+	margin-top: -12px;
+	transform: scale(0.65);
+}
+
+@media screen and (min-aspect-ratio: 4/3) {
+    #main-slider {
+        height: 100vh !important;
+    }
+
+    .head-overlay+img {
+        height: 100vh !important;
+    }
+}
+
+@media screen and (max-aspect-ratio: 4/3) {
+    #main-slider {
+        height: 100% !important;
+    }
+
+    .head-overlay+img {
+        height: 100% !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .brand-data > img {
+		height: 60px;
+		width: 60px;
+    }
+}
+
+@media screen and (max-width: 992px) and (min-width: 768px){
+	.brand-data{
+		margin-left: -20px !important;
+		padding: 0px !important;
 	}
 }
