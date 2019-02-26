@@ -34,6 +34,8 @@
   <!-- Include Custom CSS -->
   <link rel="stylesheet" href="assets/css/custom.css">
 
+  <link rel="stylesheet" type="text/css" href="assets/css/registration_closed.css">
+
 <!--add from here-->
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script type="text/javascript" src="assets/js/smoothscroll.js"></script>
@@ -50,6 +52,21 @@
 <body>
 
   <!-- Header Section -->
+   <div id="modal" class="modal-dialog modal-dialog-centered">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&#10006;</span>
+      <h2>Registration Closed</h2>
+    </div>
+    <div class="modal-body">
+      <p>Sorry for the inconvinence caused.We will be back soon. <br> Stay tuned!</p>
+      <p>For queries contact us at <a href="mailto:ignis2K19@gmail.com">ignis2K19@gmail.com</a></p>
+    </div>
+  </div>
+
+</div>
+
 
   <header id="masthead" class="masthead navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -64,7 +81,7 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <nav id="main-menu" class="collapse navbar-collapse pull-right">
         <ul class="nav navbar-nav">
-          <a  class="btn btn-success navbar-btn navbar-left" style="margin-right: 22px; text-align: center;" href="https://abhishektiwari3.typeform.com/to/Y78W2z" target="_blank">Register Now</a>
+          <a class="btn btn-success navbar-btn navbar-left" style="margin-right: 22px; text-align: center;" onclick="reg()" >Register Now</a> <!--modify this also to reg_closed file-->
           <li class="active"><a href="#main-slider" class="smoothScroll">HOME</a></li>
           <li><a href="#services" class="smoothScroll">ABOUT US</a></li>
           <li><a href="#about" class="smoothScroll">EVENTS</a></li>
@@ -76,7 +93,6 @@
   </header><!-- /#masthead -->
 
   <!-- Header Section -->
-
 
 
    <!-- Main Slider -->
@@ -94,7 +110,7 @@
               <h2 class="slider-title" data-animation="wow animated bounceInDown">Welcome to <span>IGNIS 2K19</span></h2>
               <p class="slide-description">THE SPORTS FEST OF SVNIT SURAT</p>
               <div class="slide-btn-container">
-                <a class="btn" href="https://abhishektiwari3.typeform.com/to/Y78W2z" target="_blank">Register Now</a>
+                <a class="btn" onclick="reg()">Register Now</a>
               </div><!-- /.slide-btn-container -->
             </div><!-- /.slide-inner -->
           </div><!-- /.slider-text -->
@@ -108,7 +124,7 @@
               <h2 class="slider-title">Begins From <span>31st to 2nd APRIL</span></h2>
               <p class="slide-description">MEET YOU ON <span>31st MARCH</span></p>
               <div class="slide-btn-container">
-                <a class="btn" href="https://abhishektiwari3.typeform.com/to/Y78W2z" target="_blank">Register Now</a>
+                <a class="btn" onclick="reg()">Register Now</a> <!--modify this to reg closed file -->
               </div><!-- /.slide-btn-container -->
             </div><!-- /.slide-inner -->
           </div><!-- /.slider-text -->
@@ -156,7 +172,7 @@
                   <div class="item-details">
                     <h4 class="item-title">IGNIS 2018</h4><!-- /.item-title -->
                     <p class="item-description">
-                      6th edition of the Annual Sports Meet... That proved to be a great success, where over 50 Colleges participated from all over India...
+                      8th edition of the Annual Sports Meet... That proved to be a great success, where over 50 Colleges participated from all over India...
                     </p><!-- /.item-description -->
                   </div><!-- /.item-details -->
                 </div><!-- /.item -->
@@ -167,7 +183,7 @@
                   <div class="item-details">
                     <h4 class="item-title">IGNIS 2019</h4>
                     <p class="item-description">
-                      IGNIS 2019, in its seventh edition, is SVNIT’s Annual Sports Meet and is one of the biggest in Western India. SVNIT, Surat in the past has hosted several other editions of Inter-NIT Tournaments besides the five Annual meets. Filled with the elements of joy, entertainment, celebrations and fun, IGNIS is indeed one of the biggest events of its kind. The event promises to be bigger than ever this time around with several informal events being added to the mix.
+                      IGNIS 2019, in its ninth edition, is SVNIT’s Annual Sports Meet and is one of the biggest in Western India. SVNIT, Surat in the past has hosted several other editions of Inter-NIT Tournaments besides the five Annual meets. Filled with the elements of joy, entertainment, celebrations and fun, IGNIS is indeed one of the biggest events of its kind. The event promises to be bigger than ever this time around with several informal events being added to the mix.
                     </p><!-- /.item-description -->
                   </div><!-- /.item-details -->
                 </div><!-- /.item -->
@@ -791,5 +807,26 @@
     $(".bxslider").bxSlider({auto:!0,preloadImages:"all",mode:"horizontal",captions:!1,controls:!0,pause:4000,speed:1200,onSliderLoad:function(){$(".bxslider>li .slide-inner").eq(1).addClass("active-slide"),$(".slide-inner.active-slide .slider-title").addClass("wow animated bounceInDown"),$(".slide-inner.active-slide .slide-description").addClass("wow animated bounceInRight"),$(".slide-inner.active-slide .btn").addClass("wow animated zoomInUp")},onSlideAfter:function(e,i,n){console.log(n),$(".active-slide").removeClass("active-slide"),$(".bxslider>li .slide-inner").eq(n+1).addClass("active-slide"),$(".slide-inner.active-slide").addClass("wow animated bounceInRight")},onSlideBefore:function(){$(".slide-inner.active-slide").removeClass("wow animated bounceInRight"),$(".one.slide-inner.active-slide").removeAttr("style")}});
 
   </script>
+  <script type="text/javascript">
+  function reg()
+  {var modal = document.getElementById('modal');
+  
+  //var reg_btn = document.getElementById('regBtn');
+  
+  var closing = document.getElementsByClassName("close")[0];
+  //for <span class = "close">&times;</span>
+  
+    modal.style.display = "block";
+  
+  
+  closing.onclick = function() {
+    modal.style.display = "none";
+  }
+  
+  window.onclick = function(event){
+    if(event.target == modal)
+      modal.style.display = "none";
+  }}
+</script>
 </body>
 </html>
