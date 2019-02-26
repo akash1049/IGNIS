@@ -1335,3 +1335,30 @@ footer .widget-title {
 .read-more{
     color: #e74c3c;
 }
+
+
+@media screen and (min-aspect-ratio: 4/3) {
+    #main-slider {
+        height: 100vh !important;
+    }
+
+    .head-overlay+img {
+        height: 100vh !important;
+    }
+}
+
+@media screen and (max-aspect-ratio: 4/3) {
+    #main-slider {
+        height: 100% !important;
+    }
+
+    .head-overlay+img {
+        height: 100% !important;
+    }
+}
+
+@media screen and (min-width: 400px) {
+    .brand-data > img {
+        src: "images/thumbnail/ignis16.png";
+    }
+}
